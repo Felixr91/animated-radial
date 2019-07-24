@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center flex-column" style="height: 2000px;">
+      <div class="row">
+        <div class="col-3 bio-1 doppler">
+          <div style="width: 100%; z-index: -1; display: flex; justify-content: center;">
+            <div class="bub-photo-bw"></div>
+            <div class="bub-shine color-1"></div>
+            <div class="bub-photo"></div>
+            <div class="bub-color"></div>
+          </div>
+          <div class="emp-info">
+            <h2>Chloe Pampush</h2>
+            <p>Experience 805 Intern</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-flex justify-content-center flex-column" style="height: 2000px;">
+      <div class="row">
+        <div class="col-3 bio-1">
+          <div style="width: 100%; z-index: -1; display: flex; justify-content: center;">
+            <div class="bub-photo-bw"></div>
+            <div class="bub-shine color-1"></div>
+            <div class="bub-photo"></div>
+            <div class="bub-color"></div>
+          </div>
+          <div class="emp-info">
+            <h2>Chloe Pampush</h2>
+            <p>Experience 805 Intern</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="height: 1000px;">
+      <div class="row">
+        <div class="col-12">
+
+<!--     <svg viewBox="0 0 707 442.94">
+      <rect class="polymorph" x="0.5" y="0.5" width="706" height="339"/><polygon class="cls-1" points="0.5 0.5 706.5 0.5 515.5 250.5 0.5 339.5 0.5 0.5"/><rect class="cls-1" x="1" y="442.69" height="0.26"/>
+    </svg> -->
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1057.76 474.38"><defs><style>.cls-1{fill:#aafbff;stroke:#000;stroke-miterlimit:10;}</style></defs><title>Untitled-1</title><path class="cls-1" d="M305.5,406.5c-32.3,117.13,387.13,411.7,603,307,61.17-29.67,63.17-70.62,158-117,145.59-71.2,244.53-25.36,282-88,32.78-54.8-6-151.7-64-202-25.16-21.81-72.17-50.64-274-43-140.34,5.31-247.53,24.17-311,36C443.34,347.23,315.26,371.1,305.5,406.5Z" transform="translate(-303.24 -261.74)"/></svg>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Parroler -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/paroller.js@1.4.4/dist/jquery.paroller.min.js?ver=5.2.2"></script>
+
+    <!-- Anime.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
+    <script type="text/javascript">
+
+
+        $(".bio-2").paroller({ 
+          factorXs: 0.1,
+          factorSm: 0.1,
+          factorMd: -0.4,
+          factorLg: -0.5,
+          factorXl: -0.6,
+          factor: -0.3,
+          type: 'foreground',
+          direction: 'vertical'
+        }); 
+
+        $(".bio-1").hover(function(){
+          $(".bub-photo-bw").toggleClass("display-none");
+          $(".bub-photo").toggleClass("display-block");
+          $(".bio-color").toggleClass("display-block");
+          $(".bub-shine").toggleClass("display-block");
+        });
+
+        var buttonEl = document.querySelector('.bio-1');
+
+        function animateButton(scale, duration, elasticity) {
+        anime.remove(buttonEl);
+        anime({
+          targets: buttonEl,
+          scale: scale,
+          duration: duration,
+          elasticity: elasticity
+        });
+        }
+
+        function enterButton() { animateButton(1.1, 800, 400) };
+        function leaveButton() { animateButton(1.0, 600, 300) };
+
+        buttonEl.addEventListener('mouseenter', enterButton, false);
+        buttonEl.addEventListener('mouseleave', leaveButton, false);
+
+        // var moprhing = anime({
+        //   targets: '.cls-1',
+        //   d: [
+        //     { value: "M567.5,469.5c13.92,153,447.42,232.46,464,193,14.81-35.25-297-179.7-279-222,23.06-54.18,542,164.94,596,68,24.51-44-52.15-143.41-128-193-59.47-38.88-113-43.54-210-52-127-11.06-219.49-19.12-311,36C686.69,307.22,559.7,383.71,567.5,469.5Z"},         
+        //   ],
+        //   easing: 'easeOutQuad',
+        //   duration: 2000,
+        //   loop: true
+        // });
+
+
+
+    </script>
+  </body>
+</html>

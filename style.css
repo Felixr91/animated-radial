@@ -1,0 +1,112 @@
+.container{
+	max-width: 1000px;
+}
+
+.polymorph{
+	fill: green; 
+}
+
+.bio-1{
+	height: 280px;
+	display: flex;
+	justify-content: center;
+}
+
+.emp-info{
+	position: absolute;
+	top: 12.5rem;
+	justify-content: center;
+	text-align: center;
+	mix-blend-mode: difference;
+	color: #fd94fb;
+}
+
+.bub-photo-bw{
+	height: 14rem;
+	width: 14rem;
+	background-image: url('assets/p1-1.png');
+	clip-path: circle(50% at 50% 50%);
+	background-color: #aeaeae;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat; 
+	visibility: inherit;
+	transition: 4s;
+	position: absolute;
+	z-index: 2;
+	display: block;
+	transition: 1s;
+}
+
+.display-none{
+	display: none;
+}
+
+.display-block{
+	display: block;
+}
+
+.bub-shine{
+	height: 14rem;
+	width: 14rem;
+	background: rgb(255,255,255);
+	background: radial-gradient(circle, rgba(60, 175, 255, 0.79) 0%, rgba(249, 249, 249, 0) 100%);
+	background-position: center;
+	background-size: 250px 250px;
+	clip-path: circle(50% at 50% 50%);
+	z-index: 1;
+	background-position-y: 0%;
+	background-position-x: 0%;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	position: absolute;
+	animation: bg-slide 2s linear infinite, bg-slide-one 2s linear infinite;
+}
+
+@-webkit-keyframes bg-slide {
+/*    0%{ background-position-x: 200px; }
+    25% { background-position-x: 0px; }
+    50% { background-position-x: -200px; }
+    75% { background-position-x: 0px; }
+    100% { background-position-x: 200px; }*/
+    0%{background-position-x: 250px;}
+	100%{background-position-x: 0px;}
+}
+
+@-webkit-keyframes bg-slide-one {
+    0% { background-size: 250px 250px; }
+    50% { background-size: 600px 600px; }
+    100% { background-size: 250px 250px; }
+}
+
+.bub-photo{
+	height: 14rem;
+	width: 14rem;
+	background-image: url('assets/p1.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat; 
+	visibility: inherit;
+	transition: 4s;
+	position: absolute;
+	z-index: 1;
+	transition: 1s;
+}
+
+.bub-color{
+	height: 14rem;
+	width: 14rem;
+	background-color: #02ff0073;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat; 
+	visibility: inherit;
+	clip-path: circle(50% at 50% 50%);
+	transition: 1s;
+	position: absolute;
+}
+
+
+
+
+
